@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import ie.setu.helpers.nonExistingEmail
+import ie.setu.helpers.populateUserTable
 
 //retrieving some test data from Fixtures
 val user1 = users.get(0)
@@ -192,12 +193,4 @@ class UserDAOTest {
         }
     }
 
-    internal fun populateUserTable(): UserDAO{
-        SchemaUtils.create(Users)
-        val userDAO = UserDAO()
-        userDAO.save(user1)
-        userDAO.save(user2)
-        userDAO.save(user3)
-        return userDAO
-    }
 }
