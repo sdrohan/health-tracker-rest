@@ -40,9 +40,8 @@ jobs:
     
     steps:
        - uses: actions/checkout@v3
-       - uses: devtomio/action-railway@v1.1.4
+       - uses: bervProject/railway-deploy@main
          name: Deploy to Railway
-         env:
-           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
          with:
+           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
            service: "divine-amazement"
