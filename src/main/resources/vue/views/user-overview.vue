@@ -34,9 +34,9 @@
         </button>
       </div>
     </div>
-    <div class="list-group list-group-flush">
-      <div class="list-group-item d-flex align-items-start"
-           v-for="(user,index) in users" v-bind:key="index">
+    <div class="list-group list-group-flush" name="list-group">
+      <div class="list-group-item d-flex align-items-start"  name="list-group-item"
+                 v-for="(user,index) in users" v-bind:key="index">
         <div class="mr-auto p-2">
           <span><a :href="`/users/${user.id}`"> {{ user.name }} ({{ user.email }})</a></span>
         </div>
