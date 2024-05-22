@@ -173,6 +173,13 @@
             <artifactId>assertj-core</artifactId>
             <version>3.24.2</version>
         </dependency>
+        <!-- for mocking out the database -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.5.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
