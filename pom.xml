@@ -35,6 +35,30 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- Javalin REST service -->
+        <dependency>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin</artifactId>
+            <version>6.3.0</version>
+        </dependency>
+        <!-- Enable logging support for Javalin -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.16</version>
+        </dependency>
+        <!-- For Javalin Object Mapping -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.17.2</version>
+        </dependency>
+        <!-- json dependency for serialising json to objects -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+            <version>2.18.0</version>
+        </dependency>
     </dependencies>
 
     <build>
