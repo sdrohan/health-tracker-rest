@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeAll
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.UserDAO
 import ie.setu.helpers.nonExistingEmail
+import ie.setu.helpers.populateUserTable
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -189,14 +190,6 @@ class UserDAOTest {
         }
     }
 
-    internal fun populateUserTable(): UserDAO{
-        SchemaUtils.create(Users)
-        val userDAO = UserDAO()
-        userDAO.save(user1)
-        userDAO.save(user2)
-        userDAO.save(user3)
-        return userDAO
-    }
 }
 
 

@@ -6,9 +6,14 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import ie.setu.domain.Activity
 import ie.setu.domain.User
+import ie.setu.domain.db.Activities
 import ie.setu.domain.repository.ActivityDAO
 import ie.setu.domain.repository.UserDAO
+import ie.setu.utils.jsonToObject
 import io.javalin.http.Context
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
+import org.jetbrains.exposed.sql.transactions.transaction
+import org.jetbrains.exposed.sql.update
 
 object HealthTrackerController {
 
@@ -86,5 +91,24 @@ object HealthTrackerController {
         activityDAO.save(activity)
         ctx.json(activity)
     }
+
+    fun deleteActivityByUserId(ctx: Context){
+        activityDAO.deleteByUserId(ctx.pathParam("user-id").toInt())
+    }
+
+    fun deleteActivityByActivityId(ctx: Context){
+        activityDAO.deleteByActivityId(ctx.pathParam("activity-id").toInt())
+    }
+
+    fun updateActivity(ctx: Context){
+        val activity : Activity = jsonToObject(ctx.body())
+        if (activityDAO.updateByActivityId(
+                activityId = ctx.pathParam("activity-id").toInt(),
+                activityToUpdate = activity) != 0)
+            ctx.status(204)
+        else
+            ctx.status(404)
+    }
+
 
 }
