@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="Swagger - add skeleton openapi yaml file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/JSONUtilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/JSONUtilities.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ActivityDAOTest.executor": "Run",
+    "JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor": "Run",
     "JUnit.HealthTrackerControllerTest$CreateUsers.executor": "Run",
+    "JUnit.HealthTrackerControllerTest$DeleteActivities.executor": "Run",
     "JUnit.HealthTrackerControllerTest$DeleteUsers.executor": "Run",
+    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response.executor": "Run",
+    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities from the database returns 200 or 404 response.executor": "Run",
+    "JUnit.HealthTrackerControllerTest$UpdateActivities.executor": "Run",
     "JUnit.HealthTrackerControllerTest$UpdateUsers.executor": "Run",
     "JUnit.HealthTrackerControllerTest.executor": "Run",
     "JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response.executor": "Run",
@@ -80,7 +85,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.HealthTrackerControllerTest">
-    <configuration name="HealthTrackerControllerTest$CreateUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
         <pattern>
@@ -89,13 +94,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$CreateUsers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$CreateActivities" />
+      <option name="METHOD_NAME" value="add an activity when a user exists for it, returns a 201 response" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HealthTrackerControllerTest$DeleteActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$DeleteActivities" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTrackerControllerTest$DeleteUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
         <pattern>
@@ -104,13 +125,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$DeleteUsers" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$ReadActivities" />
+      <option name="METHOD_NAME" value="get all activities by user id when user and activities exists returns 200 response" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTrackerControllerTest$UpdateUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTrackerControllerTest$UpdateActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
         <pattern>
@@ -119,7 +141,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$UpdateUsers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$UpdateActivities" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,29 +162,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTrackerControllerTest.get all users from the database returns 200 or 404 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="METHOD_NAME" value="get all users from the database returns 200 or 404 response" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HealthTrackerControllerTest" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$UpdateUsers" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$DeleteUsers" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$CreateUsers" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$DeleteActivities" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$UpdateActivities" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response" />
       </list>
     </recent_temporary>
   </component>
@@ -315,6 +321,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt</url>
+          <line>214</line>
+          <properties class="ie.setu.controllers.HealthTrackerControllerTest.ReadActivities" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
