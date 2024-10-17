@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="Swagger - add skeleton openapi yaml file">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="Activities - add integration tests">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-activity-overview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/JSONUtilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/JSONUtilities.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="HTML File" />
+        <option value="Vue Options API Component" />
       </list>
     </option>
   </component>
@@ -50,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.ActivityDAOTest.executor": "Run",
     "JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor": "Run",
     "JUnit.HealthTrackerControllerTest$CreateUsers.executor": "Run",
@@ -77,6 +85,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Options API Component"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -84,7 +97,7 @@
       <recent name="ie.setu.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HealthTrackerControllerTest">
+  <component name="RunManager" selected="Kotlin.AppKt">
     <configuration name="HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
@@ -112,22 +125,6 @@
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
       <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$DeleteActivities" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$ReadActivities" />
-      <option name="METHOD_NAME" value="get all activities by user id when user and activities exists returns 200 response" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,13 +159,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ie.setu.AppKt" />
+      <module name="health-tracker-rest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="JUnit.HealthTrackerControllerTest" />
         <item itemvalue="JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" />
         <item itemvalue="JUnit.HealthTrackerControllerTest$DeleteActivities" />
         <item itemvalue="JUnit.HealthTrackerControllerTest$UpdateActivities" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +200,7 @@
       <workItem from="1728639026906" duration="11871000" />
       <workItem from="1728660610682" duration="803000" />
       <workItem from="1729074185852" duration="4132000" />
+      <workItem from="1729191703452" duration="8623000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -269,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728660562634</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Activities - add integration tests">
+      <option name="closed" value="true" />
+      <created>1729108687078</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729108687078</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +321,8 @@
     <MESSAGE value="JUnit - UserDAOTest CRUD functions" />
     <MESSAGE value="Activities included" />
     <MESSAGE value="4 more activities endpoints added." />
-    <option name="LAST_COMMIT_MESSAGE" value="4 more activities endpoints added." />
+    <MESSAGE value="Activities - add integration tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activities - add integration tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
