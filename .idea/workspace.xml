@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="Activities - add integration tests">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-activity-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +32,12 @@
     &quot;assignee&quot;: &quot;sdrohan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sdrohan/health-tracker-rest&quot;,
-    &quot;accountId&quot;: &quot;c88af2de-20bf-4c64-8809-00b01af23d52&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sdrohan/health-tracker-rest.git",
+    "accountId": "a0899e81-4918-4c95-8dd3-94ff37809c1e"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -84,6 +76,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -330,7 +323,7 @@
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt</url>
           <line>129</line>
-          <properties class="ie.setu.repository.UserDAOTest.DeleteUsers" method="&lt;init&gt;">
+          <properties class="ie.setu.repository.UserDAOTest.DeleteUsers">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -339,7 +332,7 @@
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTest.kt</url>
           <line>214</line>
-          <properties class="ie.setu.controllers.HealthTrackerControllerTest.ReadActivities" method="&lt;init&gt;">
+          <properties class="ie.setu.controllers.HealthTrackerControllerTest.ReadActivities">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
