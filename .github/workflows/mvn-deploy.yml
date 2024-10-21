@@ -36,11 +36,12 @@ jobs:
   deploy:
     name: Railway Deploy
     needs: test
-    runs-on: ubuntu-latest  
-    
+    runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v4
-       - uses: devtomio/action-railway@v1.1.4
-         name: Deploy to Railway
-         env:
-           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
+      - uses: actions/checkout@v4
+      - name: Install Railway
+        run: npm i -g @railway/cli
+      - name: Deploy to Railway
+        run: railway up --service ${{ secrets.RAILWAY_SERVICE }}
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
