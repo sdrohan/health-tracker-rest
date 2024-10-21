@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="Activities - add integration tests">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="lab08 - update bootstrap to latest version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +33,12 @@
     &quot;assignee&quot;: &quot;sdrohan&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sdrohan/health-tracker-rest.git",
-    "accountId": "a0899e81-4918-4c95-8dd3-94ff37809c1e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sdrohan/health-tracker-rest.git&quot;,
+    &quot;accountId&quot;: &quot;a0899e81-4918-4c95-8dd3-94ff37809c1e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -47,44 +48,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.ActivityDAOTest.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$CreateUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$DeleteActivities.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$DeleteUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities from the database returns 200 or 404 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$UpdateActivities.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$UpdateUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest.executor": "Run",
-    "JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response.executor": "Run",
-    "JUnit.UserDAOTest.executor": "Run",
-    "Kotlin.AppKt.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.health-tracker-rest [compile].executor": "Run",
-    "Maven.health-tracker-rest [validate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.ActivityDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$CreateUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$DeleteActivities.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$DeleteUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$ReadActivities.get all activities from the database returns 200 or 404 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$UpdateActivities.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$UpdateUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.AppKt.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Options API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Options API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="ie.setu.repository" />
@@ -194,6 +195,8 @@
       <workItem from="1728660610682" duration="803000" />
       <workItem from="1729074185852" duration="4132000" />
       <workItem from="1729191703452" duration="8623000" />
+      <workItem from="1729250211480" duration="7000" />
+      <workItem from="1729513846217" duration="2836000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -275,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729108687078</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="lab08 - update bootstrap to latest version">
+      <option name="closed" value="true" />
+      <created>1729249122817</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729249122817</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +326,8 @@
     <MESSAGE value="Activities included" />
     <MESSAGE value="4 more activities endpoints added." />
     <MESSAGE value="Activities - add integration tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Activities - add integration tests" />
+    <MESSAGE value="lab08 - update bootstrap to latest version" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab08 - update bootstrap to latest version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
