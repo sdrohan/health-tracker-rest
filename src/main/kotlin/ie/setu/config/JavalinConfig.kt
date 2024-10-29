@@ -8,17 +8,23 @@ import io.javalin.vue.VueComponent
 
 class JavalinConfig {
 
-    fun startJavalinService(): Javalin {
-        val app = Javalin.create{
-            //added this jsonMapper for our integration tests - serialise objects to json
-            it.jsonMapper(JavalinJackson(jsonObjectMapper()))
-            it.staticFiles.enableWebjars()
-            it.vue.vueInstanceNameInJs = "app" // only required for Vue 3, is defined in layout.html
-        }.apply {
-            exception(Exception::class.java) { e, _ -> e.printStackTrace() }
-            error(404) { ctx -> ctx.json("404 : Not Found") }
-        }.start(getRemoteAssignedPort())
+    val app = Javalin.create{
+        //added this jsonMapper for our integration tests - serialise objects to json
+        it.jsonMapper(JavalinJackson(jsonObjectMapper()))
+        it.staticFiles.enableWebjars()
+        it.vue.vueInstanceNameInJs = "app" // only required for Vue 3, is defined in layout.html
+    }.apply {
+        exception(Exception::class.java) { e, _ -> e.printStackTrace() }
+        error(404) { ctx -> ctx.json("404 : Not Found") }
+    }
 
+    fun startJavalinService(): Javalin {
+        app.start(getRemoteAssignedPort())
+        registerRoutes(app)
+        return app
+    }
+
+    fun getJavalinService(): Javalin {
         registerRoutes(app)
         return app
     }
