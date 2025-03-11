@@ -11,11 +11,18 @@ class DbConfig {
 
     fun getDbConnection(): Database {
 
-        val PGHOST = "dpg-crtbr8dumphs73flhbkg-a.frankfurt-postgres.render.com"
+       // val PGHOST = "dpg-crtbr8dumphs73flhbkg-a.frankfurt-postgres.render.com"
+       // val PGPORT = "5432"
+       // val PGUSER = "healthtracker_8g10_user"
+       // val PGPASSWORD = "YgMl8ZqhIMcDMBgpxkkP7aJ2DN9qbXkp"
+       // val PGDATABASE = "healthtracker_8g10"
+
+        //Moving to openshift
+        val PGHOST = "postgresql.agile-software-dev.svc.cluster.local"
         val PGPORT = "5432"
-        val PGUSER = "healthtracker_8g10_user"
-        val PGPASSWORD = "YgMl8ZqhIMcDMBgpxkkP7aJ2DN9qbXkp"
-        val PGDATABASE = "healthtracker_8g10"
+        val PGUSER = "user3PN"
+        val PGPASSWORD = "06B1xJPBUALHFLPLF"
+        val PGDATABASE = "sampledb"
 
         //url format should be jdbc:postgresql://host:port/database
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"

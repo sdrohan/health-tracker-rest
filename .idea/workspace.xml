@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="github actions - add kdoc comments">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthTrackerControllerTestMockDB.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/selenium/AddUserTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="lab11 - solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/selenium/AddUserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/selenium/AddUserTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,71 +49,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.ActivityDAOTest.executor": "Run",
-    "JUnit.AddUserTest.addUser.executor": "Run",
-    "JUnit.AddUserTest.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$CreateUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$DeleteActivities.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$DeleteUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$ReadActivities.get all activities from the database returns 200 or 404 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$UpdateActivities.executor": "Run",
-    "JUnit.HealthTrackerControllerTest$UpdateUsers.executor": "Run",
-    "JUnit.HealthTrackerControllerTest.executor": "Run",
-    "JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response.executor": "Run",
-    "JUnit.HealthTrackerControllerTestMockDB.executor": "Run",
-    "JUnit.HealthTrackerControllerTestMockDB.getting a user by id when id exists, returns a 200 response.executor": "Run",
-    "JUnit.UserDAOTest.executor": "Run",
-    "Kotlin.AppKt.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.health-tracker-rest [clean].executor": "Run",
-    "Maven.health-tracker-rest [compile].executor": "Run",
-    "Maven.health-tracker-rest [org.jetbrains.dokka:dokka-maven-plugin:1.7.20:dokka].executor": "Run",
-    "Maven.health-tracker-rest [validate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.ActivityDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddUserTest.addUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$CreateUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$DeleteActivities.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$DeleteUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$ReadActivities.get all activities by user id when user and activities exists returns 200 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$ReadActivities.get all activities from the database returns 200 or 404 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$UpdateActivities.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest$UpdateUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTest.get all users from the database returns 200 or 404 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTestMockDB.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HealthTrackerControllerTestMockDB.getting a user by id when id exists, returns a 200 response.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserDAOTest$ReadUsers.get user by id that exists, results in a correct user returned.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.AppKt.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [org.jetbrains.dokka:dokka-maven-plugin:1.7.20:dokka].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.health-tracker-rest [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/siobhandrohan/SETU/2024-2025/agile-workspace/health-tracker-rest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Options API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Options API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="ie.setu.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HealthTrackerControllerTestMockDB">
-    <configuration name="AddUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.selenium" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.selenium.AddUserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserDAOTest$ReadUsers.get user by id that exists, results in a correct user returned">
     <configuration name="AddUserTest.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
@@ -163,6 +148,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDAOTest$ReadUsers.get user by id that exists, results in a correct user returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest$ReadUsers" />
+      <option name="METHOD_NAME" value="get user by id that exists, results in a correct user returned" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.setu.AppKt" />
       <module name="health-tracker-rest" />
@@ -172,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDAOTest$ReadUsers.get user by id that exists, results in a correct user returned" />
         <item itemvalue="JUnit.HealthTrackerControllerTestMockDB" />
         <item itemvalue="JUnit.HealthTrackerControllerTestMockDB.getting a user by id when id exists, returns a 200 response" />
         <item itemvalue="JUnit.AddUserTest.addUser" />
         <item itemvalue="Kotlin.AppKt" />
-        <item itemvalue="JUnit.AddUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +208,14 @@
       <workItem from="1729191703452" duration="8623000" />
       <workItem from="1729250211480" duration="7000" />
       <workItem from="1729513846217" duration="7378000" />
-      <workItem from="1730228157787" duration="7377000" />
+      <workItem from="1730228157787" duration="8672000" />
+      <workItem from="1730719409853" duration="538000" />
+      <workItem from="1730813336203" duration="208000" />
+      <workItem from="1730971721904" duration="592000" />
+      <workItem from="1731413724692" duration="1202000" />
+      <workItem from="1731957084871" duration="189000" />
+      <workItem from="1732206633095" duration="196000" />
+      <workItem from="1741711476317" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -313,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729529182196</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="lab11 - solution">
+      <option name="closed" value="true" />
+      <created>1730237369136</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730237369136</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,15 +372,16 @@
     <MESSAGE value="lab08 - update bootstrap to latest version" />
     <MESSAGE value="lab09 - vue crud for user." />
     <MESSAGE value="github actions - add kdoc comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="github actions - add kdoc comments" />
+    <MESSAGE value="lab11 - solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab11 - solution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt</url>
-          <line>129</line>
-          <properties class="ie.setu.repository.UserDAOTest.DeleteUsers">
+          <line>128</line>
+          <properties class="ie.setu.repository.UserDAOTest.DeleteUsers" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

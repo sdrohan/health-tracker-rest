@@ -6,6 +6,7 @@ import ie.setu.config.JavalinConfig
 fun main() {
 
     DbConfig().getDbConnection()
+
     JavalinConfig().startJavalinService()
 
 }

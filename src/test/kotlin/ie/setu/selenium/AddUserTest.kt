@@ -47,8 +47,6 @@ class AddUserTest {
 
         JavalinTest.test(app) { _, client ->
 
-            //implicit wait for elements to be loaded
-          //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
             driver.get(client.origin)
             driver.findElement(By.linkText("More Details...")).click()
 
