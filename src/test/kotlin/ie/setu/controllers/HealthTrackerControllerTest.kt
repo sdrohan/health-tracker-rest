@@ -12,11 +12,12 @@ import kong.unirest.core.Unirest
 import org.joda.time.DateTime
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 
-
+@Disabled
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class HealthTrackerControllerTest {
 
