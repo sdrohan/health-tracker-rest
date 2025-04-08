@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="adding openshift eclipse maven as plugin also">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="postgresql environment vars for openshift">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -108,7 +108,7 @@
       <recent name="ie.setu.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.AppKt">
+  <component name="RunManager" selected="Maven.health-tracker-rest [package] - skip tests">
     <configuration name="HealthTrackerControllerTestMockDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
@@ -171,6 +171,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="health-tracker-rest [package] - skip tests" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+                <option value="-DskipTests" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.AppKt" />
@@ -222,7 +253,7 @@
       <workItem from="1741869424933" duration="480000" />
       <workItem from="1741878275852" duration="1350000" />
       <workItem from="1744108618581" duration="273000" />
-      <workItem from="1744109145848" duration="1191000" />
+      <workItem from="1744109145848" duration="2519000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -368,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741863915836</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="postgresql environment vars for openshift">
+      <option name="closed" value="true" />
+      <created>1744113531487</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744113531487</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +454,8 @@
     <MESSAGE value="updating to openshift db" />
     <MESSAGE value="adding openshift eclipse dependency" />
     <MESSAGE value="adding openshift eclipse maven as plugin also" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding openshift eclipse maven as plugin also" />
+    <MESSAGE value="postgresql environment vars for openshift" />
+    <option name="LAST_COMMIT_MESSAGE" value="postgresql environment vars for openshift" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
