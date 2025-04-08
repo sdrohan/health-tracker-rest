@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="removing the docker file">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="trying a more fully qualified main manifest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +253,7 @@
       <workItem from="1741869424933" duration="480000" />
       <workItem from="1741878275852" duration="1350000" />
       <workItem from="1744108618581" duration="273000" />
-      <workItem from="1744109145848" duration="12505000" />
+      <workItem from="1744109145848" duration="13825000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -464,7 +463,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744144773671</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="change to maven assembly plugin">
+      <option name="closed" value="true" />
+      <created>1744146098242</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744146098242</updated>
+    </task>
+    <task id="LOCAL-00028" summary="trying a more fully qualified main manifest">
+      <option name="closed" value="true" />
+      <created>1744146713390</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744146713390</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +534,9 @@
     <MESSAGE value="removing fat jar build - causing confusion in openshift" />
     <MESSAGE value="setting main manifest attribute for jar" />
     <MESSAGE value="removing the docker file" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing the docker file" />
+    <MESSAGE value="change to maven assembly plugin" />
+    <MESSAGE value="trying a more fully qualified main manifest" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying a more fully qualified main manifest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

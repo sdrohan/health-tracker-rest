@@ -269,7 +269,7 @@
                     <archive>
                         <!-- This sets up the main manifest attribute -->
                         <manifest>
-                            <mainClass>src.main.kotlin.ie.setu.AppKt</mainClass>
+                            <mainClass>ie.setu.AppKt</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
