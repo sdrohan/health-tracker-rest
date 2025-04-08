@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy the JAR file from build context to container
-COPY target/health-tracker-rest-1.0-with-dependencies.jar health-tracker-rest-1.0-with-dependencies.jar
+COPY target/health-tracker-rest-1.0-jar-with-dependencies.jar app.jar
 
 # Start the app
-ENTRYPOINT ["java", "-jar", "health-tracker-rest-1.0-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
