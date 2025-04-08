@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="adding Dockerfile">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="testing webhook in github">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +109,7 @@
       <recent name="ie.setu.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.health-tracker-rest [package] - skip tests">
+  <component name="RunManager" selected="Kotlin.AppKt">
     <configuration name="HealthTrackerControllerTestMockDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest" />
       <extension name="coverage">
@@ -253,7 +254,7 @@
       <workItem from="1741869424933" duration="480000" />
       <workItem from="1741878275852" duration="1350000" />
       <workItem from="1744108618581" duration="273000" />
-      <workItem from="1744109145848" duration="3633000" />
+      <workItem from="1744109145848" duration="7782000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -415,7 +416,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744118674831</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="adding Dockerfile">
+      <option name="closed" value="true" />
+      <created>1744119678826</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744119678826</updated>
+    </task>
+    <task id="LOCAL-00022" summary="testing webhook in github">
+      <option name="closed" value="true" />
+      <created>1744120310045</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1744120310045</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +483,8 @@
     <MESSAGE value="adding openshift eclipse maven as plugin also" />
     <MESSAGE value="postgresql environment vars for openshift" />
     <MESSAGE value="adding Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding Dockerfile" />
+    <MESSAGE value="testing webhook in github" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing webhook in github" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

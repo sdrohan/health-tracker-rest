@@ -11,13 +11,7 @@ class DbConfig {
 
     fun getDbConnection(): Database {
 
-       // val PGHOST = "dpg-crtbr8dumphs73flhbkg-a.frankfurt-postgres.render.com"
-       // val PGPORT = "5432"
-       // val PGUSER = "healthtracker_8g10_user"
-       // val PGPASSWORD = "YgMl8ZqhIMcDMBgpxkkP7aJ2DN9qbXkp"
-       // val PGDATABASE = "healthtracker_8g10"
-
-        //Moving to openshift
+        //Moving to openshift (will replace with secrets later)
         //val PGHOST = "postgresql.agile-software-dev.svc.cluster.local"
         //val PGPORT = "5432"
         //val PGUSER = "user3PN"
@@ -25,11 +19,11 @@ class DbConfig {
         //val PGDATABASE = "sampledb"
 
         // picking up environment secrets from openshift
-        val PGHOST = System.getenv("PGHOST") //?: "localhost"
-        val PGPORT = System.getenv("PGPORT") //?: "5432"
-        val PGUSER = System.getenv("PGUSER") //?: "defaultuser"
-        val PGPASSWORD = System.getenv("PGPASSWORD") //?: "defaultpass"
-        val PGDATABASE = System.getenv("PGDATABASE")// ?: "defaultdb"
+        val PGHOST = System.getenv("POSTGRESQL_HOST") ?: "localhost"
+        val PGPORT = System.getenv("POSTGRESQL_PORT") ?: "5432"
+        val PGUSER = System.getenv("POSTGRESQL_USER") ?: "defaultuser"
+        val PGPASSWORD = System.getenv("POSTGRESQL_PASSWORD") ?: "defaultpass"
+        val PGDATABASE = System.getenv("POSTGRESQL_DATABASE")  ?: "defaultdb"
 
         //url format should be jdbc:postgresql://host:port/database
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
@@ -43,6 +37,7 @@ class DbConfig {
             logger.info { "DB Connected Successfully..." + dbConfig.url }
         } catch (e: PSQLException) {
             logger.info { "Error in DB Connection...${e.printStackTrace()}" }
+            logger.info { "Env vars: $PGHOST, $PGPORT, $PGUSER, $PGDATABASE" }
         }
 
         return dbConfig
