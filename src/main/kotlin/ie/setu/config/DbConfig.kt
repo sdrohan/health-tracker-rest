@@ -18,11 +18,18 @@ class DbConfig {
        // val PGDATABASE = "healthtracker_8g10"
 
         //Moving to openshift
-        val PGHOST = "postgresql.agile-software-dev.svc.cluster.local"
-        val PGPORT = "5432"
-        val PGUSER = "user3PN"
-        val PGPASSWORD = "06B1xJPBUALHFLPLF"
-        val PGDATABASE = "sampledb"
+        //val PGHOST = "postgresql.agile-software-dev.svc.cluster.local"
+        //val PGPORT = "5432"
+        //val PGUSER = "user3PN"
+        //val PGPASSWORD = "06B1xJPBUALHFLPLF"
+        //val PGDATABASE = "sampledb"
+
+        // picking up environment secrets from openshift
+        val PGHOST = System.getenv("PGHOST") //?: "localhost"
+        val PGPORT = System.getenv("PGPORT") //?: "5432"
+        val PGUSER = System.getenv("PGUSER") //?: "defaultuser"
+        val PGPASSWORD = System.getenv("PGPASSWORD") //?: "defaultpass"
+        val PGDATABASE = System.getenv("PGDATABASE")// ?: "defaultdb"
 
         //url format should be jdbc:postgresql://host:port/database
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"

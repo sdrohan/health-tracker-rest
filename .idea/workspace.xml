@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="updating to openshift db">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="adding openshift eclipse maven as plugin also">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -37,6 +38,9 @@
     &quot;accountId&quot;: &quot;a0899e81-4918-4c95-8dd3-94ff37809c1e&quot;
   }
 }</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="hw2iykuy" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -85,6 +89,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -176,8 +184,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4" />
       </set>
     </attachedChunks>
   </component>
@@ -209,7 +217,12 @@
       <workItem from="1732206633095" duration="196000" />
       <workItem from="1741711476317" duration="2268000" />
       <workItem from="1741784111857" duration="4978000" />
-      <workItem from="1741858552399" duration="364000" />
+      <workItem from="1741858552399" duration="627000" />
+      <workItem from="1741861047619" duration="3280000" />
+      <workItem from="1741869424933" duration="480000" />
+      <workItem from="1741878275852" duration="1350000" />
+      <workItem from="1744108618581" duration="273000" />
+      <workItem from="1744109145848" duration="1191000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -339,7 +352,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741784501320</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="adding openshift eclipse dependency">
+      <option name="closed" value="true" />
+      <created>1741859004096</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1741859004096</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adding openshift eclipse maven as plugin also">
+      <option name="closed" value="true" />
+      <created>1741863915836</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741863915836</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +413,9 @@
     <MESSAGE value="github actions - add kdoc comments" />
     <MESSAGE value="lab11 - solution" />
     <MESSAGE value="updating to openshift db" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating to openshift db" />
+    <MESSAGE value="adding openshift eclipse dependency" />
+    <MESSAGE value="adding openshift eclipse maven as plugin also" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding openshift eclipse maven as plugin also" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
