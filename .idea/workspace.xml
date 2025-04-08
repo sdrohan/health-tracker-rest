@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="testing webhook in github">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="setting main manifest attribute for jar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +252,7 @@
       <workItem from="1741869424933" duration="480000" />
       <workItem from="1741878275852" duration="1350000" />
       <workItem from="1744108618581" duration="273000" />
-      <workItem from="1744109145848" duration="8986000" />
+      <workItem from="1744109145848" duration="11329000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -438,7 +438,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744137988223</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="removing fat jar build - causing confusion in openshift">
+      <option name="closed" value="true" />
+      <created>1744140557357</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1744140557357</updated>
+    </task>
+    <task id="LOCAL-00025" summary="setting main manifest attribute for jar">
+      <option name="closed" value="true" />
+      <created>1744144002784</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744144002784</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +506,9 @@
     <MESSAGE value="postgresql environment vars for openshift" />
     <MESSAGE value="adding Dockerfile" />
     <MESSAGE value="testing webhook in github" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing webhook in github" />
+    <MESSAGE value="removing fat jar build - causing confusion in openshift" />
+    <MESSAGE value="setting main manifest attribute for jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting main manifest attribute for jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
