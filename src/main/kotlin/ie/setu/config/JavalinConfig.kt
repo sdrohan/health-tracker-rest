@@ -69,6 +69,6 @@ class JavalinConfig {
         val remotePort = System.getenv("PORT")
         return if (remotePort != null) {
             Integer.parseInt(remotePort)
-        } else 7001
+        } else 8080
     }
 }

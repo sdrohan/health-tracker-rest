@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="trying a more fully qualified main manifest">
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="redoing qualified main manifest name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +254,7 @@
       <workItem from="1741869424933" duration="480000" />
       <workItem from="1741878275852" duration="1350000" />
       <workItem from="1744108618581" duration="273000" />
-      <workItem from="1744109145848" duration="13825000" />
+      <workItem from="1744109145848" duration="15842000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -479,7 +480,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744146713390</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="redoing qualified main manifest name">
+      <option name="closed" value="true" />
+      <created>1744150542599</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744150542599</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +520,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add endpoints, get one by email, delete one, update one" />
     <MESSAGE value="Lab05 - Connect to Remote Database" />
     <MESSAGE value="Railway - add Maven assembly plugin" />
     <MESSAGE value="Railway - listen on remotely assigned port" />
@@ -536,7 +544,8 @@
     <MESSAGE value="removing the docker file" />
     <MESSAGE value="change to maven assembly plugin" />
     <MESSAGE value="trying a more fully qualified main manifest" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying a more fully qualified main manifest" />
+    <MESSAGE value="redoing qualified main manifest name" />
+    <option name="LAST_COMMIT_MESSAGE" value="redoing qualified main manifest name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
