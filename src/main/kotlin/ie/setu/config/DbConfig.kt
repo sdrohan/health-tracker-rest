@@ -19,7 +19,9 @@ class DbConfig {
         //val PGDATABASE = "sampledb"
 
         // picking up environment secrets from openshift
-        val PGHOST = (System.getenv("POSTGRESQL_HOST") ?: "localhost").removePrefix("tcp://")
+        //val PGHOST = (System.getenv("POSTGRESQL_HOST") ?: "localhost").removePrefix("tcp://")
+        val rawHost = System.getenv("POSTGRESQL_HOST") ?: "localhost"
+        val PGHOST = rawHost.substringAfterLast("://")
         val PGPORT = System.getenv("POSTGRESQL_PORT") ?: "5432"
         val PGDATABASE = System.getenv("POSTGRESQL_DATABASE")  ?: "defaultdb"
         val PGUSER = System.getenv("POSTGRESQL_USER") ?: "defaultuser"
@@ -29,7 +31,7 @@ class DbConfig {
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
 
         try {
-            logger.info { "Starting DB Connection...$dbUrl" }
+            logger.info { "Starting DB Connection...$dbUrl \n rawHost: ${rawHost}" }
             dbConfig = Database.connect(
                 url = dbUrl, driver = "org.postgresql.Driver",
                 user = PGUSER, password = PGPASSWORD
