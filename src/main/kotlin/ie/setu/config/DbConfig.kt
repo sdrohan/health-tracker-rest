@@ -9,6 +9,7 @@ class DbConfig {
     private val logger = KotlinLogging.logger {}
     private lateinit var dbConfig: Database
 
+
     fun getDbConnection(): Database {
 
         // Read from OpenShift-injected environment variables
