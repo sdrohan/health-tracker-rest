@@ -20,6 +20,7 @@ class DbConfig {
         val PGUSER = System.getenv("POSTGRESQL_USER") ?: "defaultuser"
         val PGPASSWORD = System.getenv("POSTGRESQL_PASSWORD") ?: "defaultpass"
 
+
         // JDBC connection string format
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
 
