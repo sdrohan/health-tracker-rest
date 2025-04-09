@@ -9,7 +9,6 @@ class DbConfig {
     private val logger = KotlinLogging.logger {}
     private lateinit var dbConfig: Database
 
-
     fun getDbConnection(): Database {
 
         // Read from OpenShift-injected environment variables
@@ -19,7 +18,6 @@ class DbConfig {
         val PGDATABASE = System.getenv("POSTGRESQL_DATABASE") ?: "defaultdb"
         val PGUSER = System.getenv("POSTGRESQL_USER") ?: "defaultuser"
         val PGPASSWORD = System.getenv("POSTGRESQL_PASSWORD") ?: "defaultpass"
-
 
         // JDBC connection string format
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
