@@ -12,6 +12,7 @@ class DbConfig {
     fun getDbConnection(): Database {
 
         // Read from OpenShift-injected environment variables
+
         val PGHOST = System.getenv("POSTGRESQL_SERVICE_HOST") ?: "localhost"
         val PGPORT = System.getenv("POSTGRESQL_SERVICE_PORT") ?: "5432"
         val PGDATABASE = System.getenv("POSTGRESQL_DATABASE") ?: "defaultdb"

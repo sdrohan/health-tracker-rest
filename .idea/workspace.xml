@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="parsing the db host">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" afterDir="false" />
-    </list>
+    <list default="true" id="ff5a477f-7f44-4373-8657-59415ceeea61" name="Changes" comment="parsing the db config" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +252,7 @@
       <workItem from="1744108618581" duration="273000" />
       <workItem from="1744109145848" duration="15863000" />
       <workItem from="1744153310682" duration="476000" />
-      <workItem from="1744202207951" duration="1342000" />
+      <workItem from="1744202207951" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="Add endpoints, get one by email, delete one, update one">
       <option name="closed" value="true" />
@@ -513,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744203624190</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="parsing the db config">
+      <option name="closed" value="true" />
+      <created>1744213465115</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1744213465115</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +550,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="DB - add findById functionality" />
     <MESSAGE value="DB - add findByEmail, save, delete, update functionality" />
     <MESSAGE value="JUnit - UserDAOTest CRUD functions" />
     <MESSAGE value="Activities included" />
@@ -570,7 +574,8 @@
     <MESSAGE value="single jar - fat" />
     <MESSAGE value="removing tcp from the dburl" />
     <MESSAGE value="parsing the db host" />
-    <option name="LAST_COMMIT_MESSAGE" value="parsing the db host" />
+    <MESSAGE value="parsing the db config" />
+    <option name="LAST_COMMIT_MESSAGE" value="parsing the db config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
