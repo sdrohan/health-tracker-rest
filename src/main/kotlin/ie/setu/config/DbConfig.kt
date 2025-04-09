@@ -19,11 +19,11 @@ class DbConfig {
         //val PGDATABASE = "sampledb"
 
         // picking up environment secrets from openshift
-        val PGHOST = System.getenv("POSTGRESQL_HOST") ?: "localhost"
+        val PGHOST = (System.getenv("POSTGRESQL_HOST") ?: "localhost").removePrefix("tcp://")
         val PGPORT = System.getenv("POSTGRESQL_PORT") ?: "5432"
+        val PGDATABASE = System.getenv("POSTGRESQL_DATABASE")  ?: "defaultdb"
         val PGUSER = System.getenv("POSTGRESQL_USER") ?: "defaultuser"
         val PGPASSWORD = System.getenv("POSTGRESQL_PASSWORD") ?: "defaultpass"
-        val PGDATABASE = System.getenv("POSTGRESQL_DATABASE")  ?: "defaultdb"
 
         //url format should be jdbc:postgresql://host:port/database
         val dbUrl = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
