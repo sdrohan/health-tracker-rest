@@ -19,17 +19,17 @@ jobs:
         java-version: '17'
         distribution: 'adoptopenjdk'
 
-    - name: Set up Maven
-      uses: actions/setup-maven@v2
+    - name: Setup Maven
+      uses: stCarolas/setup-maven@v5
       with:
-        maven-version: '3.8.1'  # Use the version of Maven you require
-
+        maven-version: 3.8.2
+        
     - name: Build the application with Maven
       run: mvn clean package -DskipTests
 
-    - name: Set up OpenShift CLI
-      uses: redhat-actions/oc-cli@v2
-
+    - name: OpenShift Client Installer
+      uses: redhat-actions/oc-installer@v1.2
+          
     - name: Log in to OpenShift
       env:
         OPENSHIFT_API_URL: ${{ secrets.OPENSHIFT_API_URL }}
