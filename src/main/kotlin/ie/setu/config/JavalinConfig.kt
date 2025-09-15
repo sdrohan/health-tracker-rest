@@ -43,6 +43,7 @@ class JavalinConfig {
         app.post("/api/activities", HealthTrackerController::addActivity)
         app.delete("/api/activities/{activity-id}", HealthTrackerController::deleteActivityByActivityId)
         app.patch("/api/activities/{activity-id}", HealthTrackerController::updateActivity)
+        app.get("/api/activities/{activity-id}", HealthTrackerController::getActivitiesByActivityId)
     }
 
     private fun getRemoteAssignedPort(): Int {
