@@ -4,6 +4,7 @@ import ie.setu.domain.User
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.UserDAO
 import ie.setu.helpers.nonExistingEmail
+import ie.setu.helpers.populateUserTable
 import ie.setu.helpers.users
 import junit.framework.TestCase.assertEquals
 import org.jetbrains.exposed.sql.Database
@@ -194,12 +195,4 @@ class UserDAOTest {
         }
     }
 
-    internal fun populateUserTable(): UserDAO{
-        SchemaUtils.create(Users)
-        val userDAO = UserDAO()
-        userDAO.save(user1)
-        userDAO.save(user2)
-        userDAO.save(user3)
-        return userDAO
-    }
 }
