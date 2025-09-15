@@ -1,14 +1,21 @@
 package ie.setu.config
 
 import ie.setu.controllers.HealthTrackerController
+import ie.setu.utils.jsonObjectMapper
 import io.javalin.Javalin
+import io.javalin.json.JavalinJackson
 
 class JavalinConfig {
 
-    val app = Javalin.create().apply {
+    val app = Javalin.create(
+        { config ->
+            config.jsonMapper(JavalinJackson(jsonObjectMapper()))
+        }
+    ).apply {
         exception(Exception::class.java) { e, ctx -> e.printStackTrace() }
         error(404) { ctx -> ctx.json("404 - Not Found") }
     }
+
 
     fun startJavalinService(): Javalin {
         app.start(getRemoteAssignedPort())
@@ -23,6 +30,9 @@ class JavalinConfig {
         app.delete("/api/users/{user-id}", HealthTrackerController::deleteUser)
         app.patch("/api/users/{user-id}", HealthTrackerController::updateUser)
         app.get("/api/users/email/{email}", HealthTrackerController::getUserByEmail)
+        app.get("/api/activities", HealthTrackerController::getAllActivities)
+        app.post("/api/activities", HealthTrackerController::addActivity)
+        app.get("/api/users/{user-id}/activities", HealthTrackerController::getActivitiesByUserId)
     }
 
     private fun getRemoteAssignedPort(): Int {
