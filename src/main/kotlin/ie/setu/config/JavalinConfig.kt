@@ -41,7 +41,6 @@ class JavalinConfig {
         //---------------------
         app.get("/api/activities", HealthTrackerController::getAllActivities)
         app.post("/api/activities", HealthTrackerController::addActivity)
-        app.get("/api/users/{user-id}/activities", HealthTrackerController::getActivitiesByUserId)
         app.delete("/api/activities/{activity-id}", HealthTrackerController::deleteActivityByActivityId)
         app.patch("/api/activities/{activity-id}", HealthTrackerController::updateActivity)
     }
