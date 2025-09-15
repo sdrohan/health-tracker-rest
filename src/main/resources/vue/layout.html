@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>HealthTracker</title>
+    <meta charset="utf8">
+
+    <script src="/webjars/axios/1.7.7/dist/axios.min.js"></script>
+    <script src="/webjars/vue/3.5.12/dist/vue.global.prod.js"></script>
+
+    <!-- Javalin’s Vue plugin will scan your /resources/vue folder and put -->
+    <!-- all your Vue components into componentRegistration -->
+    <script>
+        const app =  Vue.createApp({});
+    </script>
+    @componentRegistration
+</head>
+
+<body>
+<main id="main-vue">
+    <!-- Javalin will let you choose one component to mount -->
+    <!-- based on the current URL, this is the routeComponent -->
+    @routeComponent
+</main>
+<script>
+    app.mount("#main-vue");
+</script>
+</body>
+</html>
