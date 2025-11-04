@@ -3,6 +3,7 @@ package ie.setu.repository
 import ie.setu.domain.User
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.UserDAO
+import ie.setu.helpers.TestDatabaseConfig
 import ie.setu.helpers.nonExistingEmail
 import ie.setu.helpers.populateUserTable
 import ie.setu.helpers.users
@@ -11,6 +12,7 @@ import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
@@ -22,13 +24,16 @@ val user3 = users.get(2)
 class UserDAOTest {
 
     companion object {
-
-        //Make a connection to a local, in memory H2 database.
         @BeforeAll
         @JvmStatic
-        internal fun setupInMemoryDatabaseConnection() {
-            Database.connect("jdbc:h2:mem:test", driver = "org.h2.Driver", user = "root", password = "")
+        fun setupInMemoryDatabase() {
+            TestDatabaseConfig.connect()
         }
+    }
+
+    @BeforeEach
+    fun resetDatabase() {
+        TestDatabaseConfig.reset()
     }
 
     @Nested

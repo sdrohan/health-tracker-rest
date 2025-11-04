@@ -5,6 +5,7 @@ import ie.setu.domain.User
 import ie.setu.domain.db.Activities
 import ie.setu.domain.db.Users
 import ie.setu.helpers.ServerContainer
+import ie.setu.helpers.TestDatabaseConfig
 import ie.setu.helpers.activities
 import ie.setu.helpers.nonExistingEmail
 import ie.setu.helpers.populateUserTable
@@ -38,17 +39,13 @@ class HealthTrackerTest {
         @BeforeAll
         @JvmStatic
         fun setupInMemoryDatabase() {
-            Database.connect(
-                url = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1",
-                driver = "org.h2.Driver",
-                user = "sa",
-                password = ""
-            )
-            transaction {
-                SchemaUtils.create(Users)
-                SchemaUtils.create(Activities)
-            }
+            TestDatabaseConfig.connect()
         }
+    }
+
+    @BeforeEach
+    fun resetDatabase() {
+        TestDatabaseConfig.reset()
     }
 
     @Nested
