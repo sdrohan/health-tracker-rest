@@ -63,8 +63,8 @@ jobs:
     - name: Build and deploy the app to OpenShift
       run: |
         # OpenShift setup uses Source-to-Image (S2I) 
-        oc start-build health-tracker-rest-openshift-labs --from-dir=target/ --follow
+        oc start-build health-tracker-rest --from-dir=target/ --follow
     
     - name: Check deployment status
       run: |
-        oc rollout status deployment/health-tracker-rest-openshift-labs
+        oc rollout status deployment/health-tracker-rest
