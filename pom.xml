@@ -21,7 +21,17 @@
         <openshift-maven-plugin.version>1.18.1</openshift-maven-plugin.version>
         <junit.jupiter.version>5.13.4</junit.jupiter.version>
         <junit.platform.version>1.13.4</junit.platform.version>
+        <dokka.version>1.7.20</dokka.version>
     </properties>
+
+    <!-- Location of the Maven Plugin for Dokka -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
@@ -154,7 +164,6 @@
             <artifactId>axios</artifactId>
             <version>1.7.7</version>
         </dependency>
-
     </dependencies>
 
     <profiles>
@@ -248,6 +257,20 @@
                         <include>*Test</include>
                     </includes>
                 </configuration>
+            </plugin>
+            <!-- Maven Plugin for Dokka - basic configuration -->
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${dokka.version}</version>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
