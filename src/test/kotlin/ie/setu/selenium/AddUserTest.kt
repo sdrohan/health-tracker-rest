@@ -12,6 +12,7 @@ import org.junit.jupiter.api.parallel.Execution
 import org.junit.jupiter.api.parallel.ExecutionMode
 import org.openqa.selenium.*
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
 import java.time.Duration
 
 @Execution(ExecutionMode.SAME_THREAD)
@@ -19,7 +20,7 @@ import java.time.Duration
 class AddUserTest {
 
     private lateinit var driver: WebDriver
-    private var baseUrl: String = ""
+    //private var baseUrl: String = ""
     private var acceptNextAlert = true
     private val verificationErrors = StringBuilder()
     private lateinit var js: JavascriptExecutor
@@ -44,8 +45,14 @@ class AddUserTest {
         //app.start(0) // 0 = auto free port
         //baseUrl = "http://localhost:${app.port()}"
 
-        System.setProperty("java.awt.headless", "true") // Run in headless mode
-        driver = ChromeDriver()
+        //System.setProperty("java.awt.headless", "true") // Run in headless mode
+        //Update to use headless mode using a different approach
+        val options = ChromeOptions()
+        options.addArguments("--headless=new")
+        options.addArguments("--no-sandbox")
+        options.addArguments("--disable-dev-shm-usage")
+        driver = ChromeDriver(options)
+        //driver = ChromeDriver()
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60))
         js = driver as JavascriptExecutor
     }
