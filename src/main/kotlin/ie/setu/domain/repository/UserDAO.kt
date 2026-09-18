@@ -23,4 +23,19 @@ class UserDAO {
         users.add(user)
     }
 
+    fun findByEmail(email: String): User?{
+        return users.find {it.email == email}
+    }
+
+    fun delete(userId: Int){
+       users.removeIf {it.id == userId}
+    }
+
+    fun update(id: Int, user: User) {
+        users.find { it.id == id }?.let {
+            it.email = user.email
+            it.name = user.name
+        }
+    }
+
 }
