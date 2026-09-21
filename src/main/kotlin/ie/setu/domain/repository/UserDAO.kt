@@ -18,9 +18,12 @@ class UserDAO {
         return userList
     }
 
-
     fun findById(id: Int): User?{
-        return null
+        return transaction {
+            Users.selectAll().where { Users.id eq id }
+                .map{mapToUser(it)}
+                .firstOrNull()
+        }
     }
 
     fun save(user: User){
