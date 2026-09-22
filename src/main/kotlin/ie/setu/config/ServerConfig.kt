@@ -1,6 +1,5 @@
 package ie.setu.config
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import ie.setu.controllers.HealthTrackerController
 import ie.setu.utils.jsonObjectMapper
 import io.javalin.Javalin
