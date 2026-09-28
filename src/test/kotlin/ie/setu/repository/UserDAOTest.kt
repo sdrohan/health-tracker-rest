@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import ie.setu.helpers.nonExistingEmail
+import ie.setu.helpers.populateUserTable
 
 
 //retrieving some test data from Fixtures
@@ -160,7 +161,6 @@ class UserDAOTest {
         }
     }
 
-
     @Nested
     inner class DeleteUsers {
 
@@ -191,15 +191,6 @@ class UserDAOTest {
                 assertEquals(2, userDAO.getAll().size)
             }
         }
-    }
-
-    internal fun populateUserTable(): UserDAO{
-        SchemaUtils.create(Users)
-        val userDAO = UserDAO()
-        userDAO.save(user1)
-        userDAO.save(user2)
-        userDAO.save(user3)
-        return userDAO
     }
 
 }
