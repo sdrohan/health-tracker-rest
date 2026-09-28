@@ -7,6 +7,8 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kong.unirest.core.HttpResponse
+import kong.unirest.core.JsonNode
 
 fun jsonObjectMapper(): ObjectMapper
         = ObjectMapper()
@@ -20,3 +22,7 @@ inline fun <reified T: Any> jsonToObject(json: String) : T
     .registerModule(JodaModule())
     .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
     .readValue<T>(json)
+
+inline fun <reified T: Any>  jsonNodeToObject(jsonNode : HttpResponse<JsonNode>) : T {
+    return jsonToObject<T>(jsonNode.body.toString())
+}
