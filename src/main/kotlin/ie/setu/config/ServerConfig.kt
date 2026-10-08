@@ -5,6 +5,9 @@ import ie.setu.utils.jsonObjectMapper
 import io.javalin.Javalin
 import io.javalin.config.JavalinConfig
 import io.javalin.json.JavalinJackson
+import io.javalin.plugin.bundled.JavalinVuePlugin
+import io.javalin.vue.VueComponent
+
 
 class ServerConfig {
 
@@ -13,6 +16,11 @@ class ServerConfig {
         val app = Javalin.create { config ->
             config.jsonMapper(
                 JavalinJackson(jsonObjectMapper())
+            )
+            config.registerPlugin(
+                JavalinVuePlugin { vue ->
+                    vue.vueInstanceNameInJs = "app"
+                }
             )
             config.routes.exception(Exception::class.java) { e, ctx ->
                 e.printStackTrace()
@@ -40,6 +48,11 @@ class ServerConfig {
         config.routes.delete("/api/activities/{activity-id}", HealthTrackerController::deleteActivityByActivityId)
         config.routes.patch("/api/activities/{activity-id}", HealthTrackerController::updateActivity)
         config.routes.get("/api/activities/{activity-id}", HealthTrackerController::getActivitiesByActivityId)
+
+        // The @routeComponent that we added in layout.html earlier will be replaced
+        // by the String inside the VueComponent. This means a call to / will load
+        // the layout and display our <home-page> component.
+        config.routes.get("/", VueComponent("<home-page></home-page>"))
     }
 
     private fun getRemoteAssignedPort(): Int {
