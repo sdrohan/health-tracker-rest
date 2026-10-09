@@ -22,6 +22,7 @@ class ServerConfig {
                     vue.vueInstanceNameInJs = "app"
                 }
             )
+            config.staticFiles.add("/META-INF/resources")
             config.routes.exception(Exception::class.java) { e, ctx ->
                 e.printStackTrace()
             }
@@ -33,6 +34,8 @@ class ServerConfig {
 
         return app
     }
+
+
 
     private fun registerRoutes(config: JavalinConfig) {
         config.routes.get("/api/users", HealthTrackerController::getAllUsers)
@@ -53,6 +56,9 @@ class ServerConfig {
         // by the String inside the VueComponent. This means a call to / will load
         // the layout and display our <home-page> component.
         config.routes.get("/", VueComponent("<home-page></home-page>"))
+        config.routes.get("/users", VueComponent("<user-overview></user-overview>"))
+        config.routes.get("/users/{user-id}", VueComponent("<user-profile></user-profile>"))
+        config.routes.get("/users/{user-id}/activities", VueComponent("<user-activity-overview></user-activity-overview>"))
     }
 
     private fun getRemoteAssignedPort(): Int {
