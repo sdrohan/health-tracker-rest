@@ -7,7 +7,7 @@
             Users
           </div>
           <div class="col text-end">
-            <button rel="tooltip" title="Add"
+            <button rel="tooltip" title="Add" id="add-button"
                     class="btn btn-info btn-simple btn-link"
                     @click="hideForm =!hideForm">
               <i class="fa fa-plus" aria-hidden="true"></i>
@@ -79,7 +79,7 @@ app.component("user-overview", {
         axios.delete(url)
             .then(response =>
                 //delete from the local state so Vue will reload list automatically
-                this.users.splice(index, 1).push(response.data))
+                this.users.splice(index, 1))
             .catch(function (error) {
               console.log(error)
             });

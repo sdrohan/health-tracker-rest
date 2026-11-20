@@ -11,7 +11,7 @@ import io.javalin.vue.VueComponent
 
 class ServerConfig {
 
-    fun startJavalinService(): Javalin {
+    fun startJavalinService(port: Int = getRemoteAssignedPort()): Javalin {
 
         val app = Javalin.create { config ->
             config.jsonMapper(
@@ -30,7 +30,7 @@ class ServerConfig {
                 ctx.json("404 - Not Found")
             }
             registerRoutes(config)
-        }.start(getRemoteAssignedPort())
+        }.start(port)
 
         return app
     }
@@ -69,4 +69,3 @@ class ServerConfig {
     }
 
 }
-
