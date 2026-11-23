@@ -38,19 +38,20 @@ class ServerConfig {
 
 
     private fun registerRoutes(config: JavalinConfig) {
-        config.routes.get("/api/users", HealthTrackerController::getAllUsers)
-        config.routes.get("/api/users/{user-id}", HealthTrackerController::getUserByUserId)
-        config.routes.post("/api/users", HealthTrackerController::addUser)
-        config.routes.get("api/users/email/{email}", HealthTrackerController::getUserByEmail)
-        config.routes.delete("/api/users/{user-id}", HealthTrackerController::deleteUser)
-        config.routes.patch("/api/users/{user-id}", HealthTrackerController::updateUser)
-        config.routes.get("/api/activities", HealthTrackerController::getAllActivities)
-        config.routes.post("/api/activities", HealthTrackerController::addActivity)
-        config.routes.get("/api/users/{user-id}/activities", HealthTrackerController::getActivitiesByUserId)
-        config.routes.delete("/api/users/{user-id}/activities", HealthTrackerController::deleteActivityByUserId)
-        config.routes.delete("/api/activities/{activity-id}", HealthTrackerController::deleteActivityByActivityId)
-        config.routes.patch("/api/activities/{activity-id}", HealthTrackerController::updateActivity)
-        config.routes.get("/api/activities/{activity-id}", HealthTrackerController::getActivitiesByActivityId)
+        val controller = HealthTrackerController()
+        config.routes.get("/api/users", controller::getAllUsers)
+        config.routes.get("/api/users/{user-id}", controller::getUserByUserId)
+        config.routes.post("/api/users", controller::addUser)
+        config.routes.get("api/users/email/{email}", controller::getUserByEmail)
+        config.routes.delete("/api/users/{user-id}", controller::deleteUser)
+        config.routes.patch("/api/users/{user-id}", controller::updateUser)
+        config.routes.get("/api/activities", controller::getAllActivities)
+        config.routes.post("/api/activities", controller::addActivity)
+        config.routes.get("/api/users/{user-id}/activities", controller::getActivitiesByUserId)
+        config.routes.delete("/api/users/{user-id}/activities", controller::deleteActivityByUserId)
+        config.routes.delete("/api/activities/{activity-id}", controller::deleteActivityByActivityId)
+        config.routes.patch("/api/activities/{activity-id}", controller::updateActivity)
+        config.routes.get("/api/activities/{activity-id}", controller::getActivitiesByActivityId)
 
         // The @routeComponent that we added in layout.html earlier will be replaced
         // by the String inside the VueComponent. This means a call to / will load

@@ -12,10 +12,10 @@ import ie.setu.domain.repository.UserDAO
 import ie.setu.utils.jsonToObject
 import io.javalin.http.Context
 
-object HealthTrackerController {
-
-    private val userDao = UserDAO()
-    private val activityDAO = ActivityDAO()
+class HealthTrackerController(
+    private val userDao: UserDAO = UserDAO(),
+    private val activityDAO: ActivityDAO = ActivityDAO()
+) {
 
     fun getAllUsers(ctx: Context) {
         val users = userDao.getAll()
